@@ -1,17 +1,17 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import {  useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
+// import Row from 'react-bootstrap/Row';
+// import Col from 'react-bootstrap/Col';
+// import Card from 'react-bootstrap/Card';
 import { Store } from '../Store';
 import Button from 'react-bootstrap/Button';
 
 const InventoryComponent = () => {
   const navigate = useNavigate();
   const { search } = useLocation();
-  const sp = new URLSearchParams(search);
-  const page = sp.get('page') || 1;
+  // const sp = new URLSearchParams(search);
+  // const page = sp.get('page') || 1;
   const [totalProducts, setTotalProducts] = useState(null);
   const [totalCountInStock, setTotalCountInStock] = useState(null);
   const [productsWithZeroCountInStock, setProductsWithZeroCountInStock] =
@@ -35,7 +35,7 @@ const InventoryComponent = () => {
     };
 
     fetchInventory();
-  }, []);
+  },);
 
   return (
     <div>

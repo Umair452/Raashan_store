@@ -1,4 +1,4 @@
-import { useEffect, useReducer, useState } from 'react';
+import { useEffect, useReducer } from 'react';
 import axios from 'axios';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -6,8 +6,7 @@ import Product from '../components/Product';
 import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
-// import data from '../data';
-import Slider from 'react-slick';
+
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 const reducer = (state, action) => {
@@ -24,13 +23,12 @@ const reducer = (state, action) => {
 };
 
 function Allproducts() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 100,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
+  // const settings = {
+  //   infinite: true,
+  //   speed: 100,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  // };
   const [{ loading, error, products }, dispatch] = useReducer(reducer, {
     products: [],
     loading: true,

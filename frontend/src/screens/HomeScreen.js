@@ -1,4 +1,4 @@
-import { useEffect, useReducer, useState } from 'react';
+import { useEffect, useReducer } from 'react';
 import axios from 'axios';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -9,9 +9,9 @@ import MessageBox from '../components/MessageBox';
 import Carousel from 'react-bootstrap/Carousel';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
-import LiveChat from './LiveChat';
-// import data from '../data';
-import Slider from 'react-slick';
+// import LiveChat from './LiveChat';
+// // import data from '../data';
+// import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 const reducer = (state, action) => {
@@ -124,13 +124,13 @@ const ImageSlider = () => {
   );
 };
 function HomeScreen() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 100,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
+  // const settings = {
+  //   dots: true,
+  //   infinite: true,
+  //   speed: 100,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  // };
   const [{ loading, error, products }, dispatch] = useReducer(reducer, {
     products: [],
     loading: true,

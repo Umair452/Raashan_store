@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+// import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 export default function LiveChat() {
   return (
     <>
@@ -9,7 +9,7 @@ export default function LiveChat() {
       <a
         aria-label="Chat on WhatsApp"
         target="_blank"
-        href="https://wa.me/+923440846068"
+        href="https://wa.me/+923440846068" rel="noreferrer"
       >
         <img
           src="/whatsappbutton.png"
